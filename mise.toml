@@ -1,0 +1,22 @@
+[tools]
+rust = "1.95.0"
+
+[tasks.build]
+description = "Build library"
+run = "cargo build"
+
+[tasks.test]
+description = "Run tests"
+run = "cargo test"
+
+[tasks.lint]
+description = "Run clippy linter"
+run = "cargo clippy --all-targets -- -D warnings"
+
+[tasks.fmt-check]
+description = "Check code formatting"
+run = "cargo fmt -- --check"
+
+[tasks.fmt]
+description = "Format code"
+run = "cargo fmt"
